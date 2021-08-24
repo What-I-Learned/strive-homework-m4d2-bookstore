@@ -17,6 +17,33 @@
   align-items: flex-start;
   justify-content: center;
 }
+.book-card {
+  min-width: 12rem;
+  max-width: 18rem;
+  margin-bottom: 2rem;
+}
+.book-cover {
+  height: 15rem;
+  overflow: hidden;
+}
+.book-cover > img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+.book-title {
+  height: 6rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+.book-price {
+  color: rgb(187, 55, 14);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.card-deck {
+  justify-content: center;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

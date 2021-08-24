@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Row, Container } from "react-bootstrap";
 import CardDeck from "react-bootstrap/CardDeck";
 import { Component } from "react";
 import books from "../data/history.json";
@@ -9,20 +9,26 @@ class LatestReleases extends Component {
   render() {
     return (
       <>
-        <CardDeck>
-          {books.map((book) => (
-            <Card key={book.asin}>
-              <Card.Img variant="top" src={book.img} />
-              <Card.Body>
-                <Card.Title>{book.title}</Card.Title>
-                <Card.Title>{book.price}</Card.Title>
-              </Card.Body>
-              <Card.Footer>
-                <small>{book.category}</small>
-              </Card.Footer>
-            </Card>
-          ))}
-        </CardDeck>
+        <Container>
+          <CardDeck>
+            {books.map((book) => (
+              <div class="book-card">
+                <Card key={book.asin}>
+                  <div className="book-cover">
+                    <Card.Img variant="top" src={book.img} />
+                  </div>
+                  <Card.Body>
+                    <Card.Title className="book-title">{book.title}</Card.Title>
+                    <div className="book-price">{book.price} Eur</div>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small>{book.category}</small>
+                  </Card.Footer>
+                </Card>
+              </div>
+            ))}
+          </CardDeck>
+        </Container>
       </>
     );
   }
