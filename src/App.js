@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bookstore-container">
       <header className="w-100">
-        <MyNavbar title="History for the soul" color="light" />
+        <MyNavbar title="History for the mind" color="light" />
         <MyWelcomeJumbo />
       </header>
       <main>
