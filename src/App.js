@@ -1,10 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Books from "./data/history.json";
+
 import MyNavbar from "./components/MyNavbar";
 import MyFooter from "./components/MyFooter";
 import MyWelcomeJumbo from "./components/WelcomeJumbo";
-import LatestReleases from "./components/LatestRelease";
+import BookList from "./components/BookList";
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
         <MyWelcomeJumbo />
       </header>
       <main>
-        <LatestReleases />
+        <BookList booklist={Books} />
       </main>
       <footer className="w-100">
         <MyFooter />
