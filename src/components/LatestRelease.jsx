@@ -1,4 +1,4 @@
-import { Card, Row, Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import CardDeck from "react-bootstrap/CardDeck";
 import { Component } from "react";
 import books from "../data/history.json";
@@ -9,11 +9,13 @@ class LatestReleases extends Component {
   render() {
     return (
       <>
+        {" "}
+        {/* empty fragment */}
         <Container>
           <CardDeck>
             {books.map((book) => (
-              <div class="book-card">
-                <Card key={book.asin}>
+              <div className="book-card" key={book.asin}>
+                <Card>
                   <div className="book-cover">
                     <Card.Img variant="top" src={book.img} />
                   </div>
