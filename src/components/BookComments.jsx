@@ -54,9 +54,10 @@ class BookComments extends Component {
       );
 
       if (response.ok) {
-        this.setState({
-          comments: [],
-        });
+        console.log(response);
+        // this.setState({
+        //   comments: [],
+        // });
       } else {
         alert("your reservation was NOT saved correctly!");
       }
@@ -92,7 +93,7 @@ class BookComments extends Component {
           <Form.Control
             as="textarea"
             rows={3}
-            value={this.state.comments[comments.length - 1]}
+            // value={this.state.comments[comments.length - 1]}
             onChange={(e) => this.handleInput(e, "comments")}
             placeholder="Leave a comments about the book"
           />
