@@ -1,6 +1,7 @@
 // First way
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Form, FormControl, Button, NavDropdown } from "react-bootstrap";
+import { FiSearch } from "react-icons/fi";
 // Second way
 // import Navbar from 'react-bootstrap/Navbar'
 
@@ -10,6 +11,7 @@ const MyNavbar = ({ title, color }) => {
   //   title: 'Strivestaurant'
   //   color: 'dark
   // }
+
   return (
     <Navbar
       className="bookstore-nav"
@@ -47,7 +49,7 @@ const MyNavbar = ({ title, color }) => {
               aria-label="Search"
             />
             <button className="bookstore-submit-search">
-              <span>S</span>
+              <FiSearch />
             </button>
           </Form>
         </Navbar.Collapse>
