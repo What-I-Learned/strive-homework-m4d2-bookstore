@@ -12,8 +12,9 @@ class SingleBook extends Component {
 
   render() {
     return !this.state.selected ? (
-      <Col xs={3}>
+      <Col xs={3} md={3}>
         <Card
+          className="book-card"
           key={this.props.singleBook.asin}
           onClick={() =>
             this.setState({
@@ -23,7 +24,9 @@ class SingleBook extends Component {
           }
           style={{ border: this.state.selected ? "3px solid red" : "none" }}
         >
-          <Card.Img variant="top" src={this.props.singleBook.img} />
+          <div className="book-card-image">
+            <Card.Img variant="top" src={this.props.singleBook.img} />
+          </div>
           <Card.Body>
             <Card.Title>{this.props.singleBook.title}</Card.Title>
           </Card.Body>
